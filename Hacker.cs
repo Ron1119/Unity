@@ -110,7 +110,8 @@ public class Hacker : MonoBehaviour
         SetRandomPwd();
         Terminal.WriteLine("You have chosen level " + level);
         Terminal.WriteLine("Please choose your password (hint): " + password.Anagram());  // show password in random order
-        Terminal.WriteLine(menuHint);
+        // Terminal.WriteLine(menuHint); // comment for repo test
+
     }
 
     void SetRandomPwd()
