@@ -58,6 +58,10 @@ public class Hacker : MonoBehaviour
             ShowMainMenu();
 
         } //TODO handle differently later
+        else if (input == "close" || input=="quit" || input=="exit")
+        { Terminal.WriteLine("Closing the game...");
+            Application.Quit();
+        }
         else if (CurrentScreen == Screen.MainScreen)
         {
             RunMainMenu(input);
@@ -110,7 +114,7 @@ public class Hacker : MonoBehaviour
         SetRandomPwd();
         Terminal.WriteLine("You have chosen level " + level);
         Terminal.WriteLine("Please choose your password (hint): " + password.Anagram());  // show password in random order
-        // Terminal.WriteLine(menuHint); // comment for repo test
+        Terminal.WriteLine(menuHint); // comment for repo test
 
     }
 
@@ -175,6 +179,7 @@ public class Hacker : MonoBehaviour
                 break;
             case 2:
                 Terminal.WriteLine("You get a poison key");
+                Terminal.WriteLine("Play agian for a greater chanllenge ");
                 Terminal.WriteLine(@"
              _____
             |     \_________/|
